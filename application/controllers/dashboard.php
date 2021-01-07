@@ -33,6 +33,11 @@ class Dashboard extends CI_Controller{
         $this->load->view('keranjang');
         $this->load->view('templates/footer');
     }
+        public function hapus_keranjang()
+    {
+        $this->cart->destroy();
+        redirect('dashboard/index');
+    }
 }
 
 ?>
