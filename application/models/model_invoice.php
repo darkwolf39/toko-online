@@ -29,7 +29,18 @@ class Model_invoice extends CI_Model{
             $this->db->insert('tb_pesanan', $data);
         }
 
-        return TRUE
+
+        return TRUE;
+    }
+
+    public function tampil_data()
+    {
+        $result = $this->db->get('tb_invoice');
+        if($result->num_rows() > 0){
+            return $result->result();
+        }else {
+            return FALSE;
+        }
     }
 }
 
