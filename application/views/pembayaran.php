@@ -13,7 +13,7 @@
                     }
 
                     echo "<h4>Total Belanja Anda : Rp. ".number_format($grand_total, 0,',','.');
-                } ?>
+                 ?>
 
             </div><br><br>
 
@@ -61,6 +61,13 @@
                 <button type="submit" class="btn btn-sm btn-primary mt-3">Pesan</button>
             
             </form>
+            
+            <?php 
+            }else 
+            {
+                echo "<h4>Keranjang Belanja Anda Masih Kosong";
+            }
+            ?>
         </div>
 
         <div class="col-md-2"></div>
