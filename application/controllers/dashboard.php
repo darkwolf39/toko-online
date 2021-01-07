@@ -47,6 +47,14 @@ class Dashboard extends CI_Controller{
         $this->load->view('pembayaran');
         $this->load->view('templates/footer');
     }
+    
+    public function proses_pesanan()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('proses_pesanan');
+        $this->load->view('templates/footer');
+    }
 }
 
 ?>
