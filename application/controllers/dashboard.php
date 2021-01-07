@@ -69,7 +69,7 @@ class Dashboard extends CI_Controller{
         $this->cart->destroy();
             $this->load->view('templates/header');
             $this->load->view('templates/sidebar');
-            $this->load->view('detail_barang');
+            $this->load->view('detail_barang', $data);
             $this->load->view('templates/footer');
     }
 
