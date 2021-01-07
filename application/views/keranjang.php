@@ -30,4 +30,8 @@
             </tr>
 
     </table>
+
+    <div>
+        <a href="<?php echo base_url('dashboard/hapus_keranjang') ?>"><div class="btn btn-sm btn-danger">Hapus Keranjang</div></a>
+    </div> 
 </div>
