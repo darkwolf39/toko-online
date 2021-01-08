@@ -4,8 +4,8 @@ class Auth extends CI_Controller{
 
     public function login()
     {
-        $this->form_validation->set_rules('username', 'Username', 'required');
-        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required', ['required' => 'Username wajib diisi!']);
+        $this->form_validation->set_rules('password', 'Password', 'required', ['required' => 'Password wajib diisi!']);
 
         if ($this->form_validation->run() == FALSE)
         {
@@ -18,7 +18,7 @@ class Auth extends CI_Controller{
             if($auth == FALSE)
             {
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">Username atau Password yang Anda masukkan salah!!
-                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>');
                 redirect('auth/login');
             }else {
@@ -30,7 +30,7 @@ class Auth extends CI_Controller{
                     case 1  : redirect('admin/dashboard_admin');
                               break;
 
-                    case 1  : redirect('dashboard');
+                    case 2  : redirect('dashboard');
                               break;
 
                     default : break;
